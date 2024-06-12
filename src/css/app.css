@@ -1,0 +1,147 @@
+.page {
+  padding: 16px 16px 96px 16px;
+}
+
+.section-container {
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.zaui-list-item {
+  cursor: pointer;
+}
+
+/* Nha Code */
+
+:root {
+  --primary-color: #fd7e14;
+  --secondary-color: #f39c12;
+  --white-color: #fff;
+  --background-grey: #d3d3d3;
+  --text-color: #333;
+  --black-color: #000;
+  --text-disable: #8f9499;
+  --text-secondary: #53575a;
+}
+
+* {
+  /* font-family: Roboto, sans-serif; */
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.zaui-bottom-navigation-item-active {
+  color: var(--primary-color) !important;
+}
+
+.header-sticky {
+  position: sticky;
+  height: auto;
+  width: 100vw;
+  z-index: 100000000;
+  /* border-bottom: var(--background-grey) solid 1px; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.sub-title {
+  font-weight: 600;
+}
+
+.text-danger {
+  color: red;
+}
+
+.bg-primary {
+  background: var(--primary-color) !important;
+}
+
+/* custom seclect branch */
+.select-branch {
+  display: flex !important;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.zaui-btn .zaui-btn-container {
+  display: block !important;
+}
+
+.zaui-snackbar.zaui-snackbar.zaui-snackbar-bottom-visible.zaui-snackbar-bottom,
+.zaui-snackbar
+  .zaui-snackbar
+  .zaui-snackbar-bottom-visible
+  .zaui-snackbar-bottom {
+  transition: 0ms;
+  background: var(--secondary-color) !important;
+}
+
+.zaui-snackbar.zaui-snackbar.zaui-snackbar-bottom-visible.zaui-snackbar-bottom
+  > * {
+  color: var(--white-color) !important;
+}
+
+.no-padding {
+  padding: 0 0 !important;
+}
+
+.no-margin {
+  margin: 0 0 !important;
+}
+
+/* Swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.input-success {
+  border: #2aaa45 solid 1px !important;
+}
+
+.input-warning {
+  border: #ffc107 solid 1px !important;
+}
+
+.input-danger {
+  border: #dc3545 solid 1px !important;
+}
+
+/* Text line */
+.text-wrap {
+  line-height: 1.4; 
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: calc(16px * 1.4 * 2); 
+}
+
