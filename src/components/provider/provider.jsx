@@ -62,7 +62,7 @@ const Provider = (props) => {
             Authorization:
               "Basic " +
               btoa(
-                "ck_d4aa860de2c1a593f16456eb86b47f8940f1f26c:cs_e7240471a66796a0f48a95e84bedb2b32a15dce0"
+                process.env.Consumer_key + ":" + process.env.Consumer_secret
               ),
             "Content-Type": "application/json",
           },
