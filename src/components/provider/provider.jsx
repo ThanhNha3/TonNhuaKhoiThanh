@@ -24,14 +24,16 @@ const Provider = (props) => {
       let page = 1;
       while (true) {
         const response = await fetch(
-          `${process.env.Api_url}?per_page=10&page=${page}`,
+          `${import.meta.env.VITE_API_URL}?per_page=10&page=${page}`,
           {
             method: "GET",
             headers: {
               Authorization:
                 "Basic " +
                 btoa(
-                  `${process.env.Consumer_key}:${process.env.Consumer_secret}`
+                  `${import.meta.env.VITE_CONSUMER_KEY}:${
+                    import.meta.env.VITE_CONSUMER_SECRET
+                  }`
                 ),
               "Content-Type": "application/json",
             },
@@ -55,14 +57,16 @@ const Provider = (props) => {
   const getNewProduct = async () => {
     try {
       const response = await fetch(
-        `https://khoithanhgroup.com/wp-json/wc/v3/products?order=desc&orderby=date&per_page=10`,
+        `${import.meta.env.VITE_API_URL}?order=desc&orderby=date&per_page=10`,
         {
           method: "GET",
           headers: {
             Authorization:
               "Basic " +
               btoa(
-                process.env.Consumer_key + ":" + process.env.Consumer_secret
+                `${import.meta.env.VITE_CONSUMER_KEY}:${
+                  import.meta.env.VITE_CONSUMER_SECRET
+                }`
               ),
             "Content-Type": "application/json",
           },

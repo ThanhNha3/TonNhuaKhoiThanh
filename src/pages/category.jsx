@@ -16,14 +16,16 @@ const Category = () => {
   const getAllCategories = async () => {
     try {
       const response = await fetch(
-        "https://khoithanhgroup.com/wp-json/wc/v3/products/categories",
+        `${import.meta.env.VITE_API_URL}/categories`,
         {
           method: "GET",
           headers: {
             Authorization:
               "Basic " +
               btoa(
-                `ck_d4aa860de2c1a593f16456eb86b47f8940f1f26c:cs_e7240471a66796a0f48a95e84bedb2b32a15dce0`
+                `${import.meta.env.VITE_CONSUMER_KEY}:${
+                  import.meta.env.VITE_CONSUMER_SECRET
+                }`
               ),
             "Content-Type": "application/json",
           },
