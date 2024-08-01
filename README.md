@@ -93,4 +93,4 @@ Gửi để xem xét: Sau khi triển khai sang "Testing", hãy gửi ứng dụ
 ## Thông tin bổ sung
 * Tài liệu Zalo Mini App API: [https://mini.zalo.me/docs/api  ](https://mini.zalo.me/docs/api)
 * Tài liệu Zalo Mini App Components: [https://mini.zalo.me/docs/api ](https://mini.zalo.me/docs/zaui)
-* Diễn đàn cộng đồng: [Liên kết đến blog Zalo Mini App](https://mini.zalo.me/community)
+* Diễn đàn cộng đồng: https://mini.zalo.me/community
