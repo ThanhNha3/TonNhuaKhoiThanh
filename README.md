@@ -92,6 +92,6 @@ Tích hợp API Zalo: Tham khảo tài liệu API Zalo Mini App để tích hợ
 Để có bất kỳ câu hỏi hoặc phản hồi nào, vui lòng liên hệ: 0946 630 197 (gặp Nhả) hoặc email: nhant2003forwork@gmail.com
 
 ## Thông tin bổ sung
-Tài liệu Zalo Mini App API: [https://mini.zalo.me/docs/api  ](https://mini.zalo.me/docs/api)
-Tài liệu Zalo Mini App Components: [https://mini.zalo.me/docs/api ](https://mini.zalo.me/docs/zaui)
-Diễn đàn cộng đồng: [Liên kết đến blog Zalo Mini App](https://mini.zalo.me/community)
+* Tài liệu Zalo Mini App API: [https://mini.zalo.me/docs/api  ](https://mini.zalo.me/docs/api)
+* Tài liệu Zalo Mini App Components: [https://mini.zalo.me/docs/api ](https://mini.zalo.me/docs/zaui)
+* Diễn đàn cộng đồng: [Liên kết đến blog Zalo Mini App](https://mini.zalo.me/community)
