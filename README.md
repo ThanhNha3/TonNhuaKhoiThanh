@@ -78,13 +78,13 @@ Chào mừng bạn đến với dự án Zalo Mini App - Tôn Nhựa Khởi Thà
 ## Triển khai
 
 Triển khai lên Zalo Mini App Studio:
-* Chế độ phát triển: Nhấp vào "Triển khai Thử nghiệm" -> "Phát triển" để thử nghiệm ứng dụng của bạn.
-* Chế độ thử nghiệm: Nhấp vào "Triển khai Thử nghiệm" -> "Thử nghiệm" để chia sẻ với cộng tác viên và gửi để xem xét.
+* Chế độ Development: Nhấp vào "Deploy Testing" -> "Development" để thử nghiệm ứng dụng của bạn.
+* Chế độ Testing: Nhấp vào "Deploy Testing" -> "Testing" để chia sẻ với cộng tác viên và gửi để xem xét.
 
 Gửi để xem xét: Sau khi triển khai sang "Testing", hãy gửi ứng dụng của bạn để Zalo xem xét.
 
 ## Lưu ý Quan trọng
-* Giới hạn triển khai Zalo: Bạn có 300 lần triển khai mỗi tháng cho chế độ Phát triển và 60 lần triển khai mỗi tháng cho chế độ Thử nghiệm.
+* Giới hạn triển khai Zalo: Bạn có 300 lần triển khai mỗi tháng cho chế độ Development và 60 lần triển khai mỗi tháng cho chế độ Testing.
 Tích hợp API Zalo: Tham khảo tài liệu API Zalo Mini App để tích hợp các dịch vụ của Zalo như Xác thực người dùng, Thanh toán, v.v.
 
 ## Liên hệ
