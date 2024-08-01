@@ -8,6 +8,7 @@ import { dataContext } from "../components/provider/provider";
 import Logo from "../../assets-src/logo.png";
 import Banner from "../components/banner/banner";
 import FlashsaleImage from "../../public/images/flashsaleimg.png";
+import SpinnerLoader from "../components/spinner/spinner";
 
 const ProductListByKind = lazy(() =>
   import("../components/product_list_by_kind/product_list_by_kind")
@@ -46,19 +47,37 @@ const HomePage = () => {
             </Box>
             <CountDownBox />
           </Box>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense
+            fallback={
+              <Box className="flex justify-center">
+                <SpinnerLoader />
+              </Box>
+            }
+          >
             <ProductListByKind products={products} kind="sale" />
           </Suspense>
         </Box>
         <Box pl={4} flex flexDirection="column" className="gap-2">
           <Text.Title>Sản phẩm nổi bật</Text.Title>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense
+            fallback={
+              <Box className="flex justify-center">
+                <SpinnerLoader />
+              </Box>
+            }
+          >
             <ProductListByKind products={products} kind="featured" />
           </Suspense>
         </Box>
         <Box pl={4} flex flexDirection="column" className="gap-2">
           <Text.Title>Sản phẩm mới</Text.Title>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense
+            fallback={
+              <Box className="flex justify-center">
+                <SpinnerLoader />
+              </Box>
+            }
+          >
             <ProductListByKind products={products} kind="new" />
           </Suspense>
         </Box>
