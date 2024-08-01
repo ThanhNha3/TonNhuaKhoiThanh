@@ -1,6 +1,9 @@
 import React, { createContext, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { getUserInfo } from "zmp-sdk/apis";
+import { fetchAllProductFeatured } from "../../redux/slices/product_featured/product_featured";
+import { fetchAllProductNew } from "../../redux/slices/product_new/product_new";
+import { fetchAllProductOnSale } from "../../redux/slices/product_onsale/product_onsale";
 export const dataContext = createContext(null);
 
 const ProviderContext = (props) => {
@@ -58,9 +61,13 @@ const ProviderContext = (props) => {
   };
 
   useEffect(() => {
-    Promise.all([getUserInfo({}), getAllProducts()]).then((response) => {
+    Promise.all([getUserInfo({})]).then((response) => {
       setUserInfo(response[0]);
     });
+    dispatch(fetchAllProductOnSale());
+    dispatch(fetchAllProductFeatured());
+    dispatch(fetchAllProductNew());
+    getAllProducts();
   }, []);
 
   const payload = {
