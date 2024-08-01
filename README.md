@@ -70,8 +70,8 @@ Chào mừng bạn đến với dự án Zalo Mini App - Tôn Nhựa Khởi Thà
 * Cài đặt phụ thuộc: npm install
 
 ## Phát triển
-* Mở Zalo Mini App Studio: Khởi chạy Studio và chọn "Dự án Mới".
-* Nhập ID Mini App: Nhập ID Mini App đã đăng ký của bạn.
+* Mở Zalo Mini App Studio: Khởi chạy Studio và chọn "Open Existing Project".
+* Chọn thư mục đã clone dự án về
 * Kết nối với Studio: Quét mã QR được tạo bởi Studio trên ứng dụng Zalo của bạn để kết nối.
 * Thử nghiệm trên giả lập: Nhấp vào "Khởi chạy giả lập" trong Zalo Mini App Studio để thử nghiệm trên trình giả lập thiết bị.
 
