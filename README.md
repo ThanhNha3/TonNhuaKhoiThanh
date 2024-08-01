@@ -32,7 +32,6 @@ ZMP app created with following options:
 * 🙏 `deploy` - deploy mini app for production
 
 ## Zalo Mini App - Tôn Nhựa Khởi Thành
-
 Chào mừng bạn đến với dự án Zalo Mini App - Tôn Nhựa Khởi Thành
 
 ## Tổng Quan Dự Án
@@ -61,8 +60,8 @@ Chào mừng bạn đến với dự án Zalo Mini App - Tôn Nhựa Khởi Thà
 ## Bắt đầu
 
 ## Yêu cầu tiên quyết
-* Zalo Mini App Studio: Cài đặt Zalo Mini App Studio hoặc sử dụng Zalo Mini App Extension từ Visual Studio Code
-* Node.js: Cài đặt Node.js https://nodejs.org/en
+* Zalo Mini App Studio: Cài đặt Zalo Mini App Studio hoặc sử dụng Zalo Mini App Extension từ Visual Studio Code.
+* Node.js: Cài đặt Node.js https://nodejs.org/en.
 * Tài khoản Zalo Mini App: Đảm bảo bạn có tài khoản Zalo Mini App với ID Mini App đã đăng ký.
 
 ## Cài đặt
@@ -86,16 +85,13 @@ Triển khai lên Zalo Mini App Studio:
 Gửi để xem xét: Sau khi triển khai sang "Testing", hãy gửi ứng dụng của bạn để Zalo xem xét.
 
 ## Lưu ý Quan trọng
-
 * Giới hạn triển khai Zalo: Bạn có 300 lần triển khai mỗi tháng cho chế độ Phát triển và 60 lần triển khai mỗi tháng cho chế độ Thử nghiệm.
 Tích hợp API Zalo: Tham khảo tài liệu API Zalo Mini App để tích hợp các dịch vụ của Zalo như Xác thực người dùng, Thanh toán, v.v.
 
 ## Liên hệ
-
 Để có bất kỳ câu hỏi hoặc phản hồi nào, vui lòng liên hệ: 0946 630 197 (gặp Nhả) hoặc email: nhant2003forwork@gmail.com
 
 ## Thông tin bổ sung
-
 Tài liệu Zalo Mini App API: [https://mini.zalo.me/docs/api  ](https://mini.zalo.me/docs/api)
 Tài liệu Zalo Mini App Components: [https://mini.zalo.me/docs/api ](https://mini.zalo.me/docs/zaui)
 Diễn đàn cộng đồng: [Liên kết đến blog Zalo Mini App](https://mini.zalo.me/community)
