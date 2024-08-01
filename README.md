@@ -85,7 +85,7 @@ Gửi để xem xét: Sau khi triển khai sang "Testing", hãy gửi ứng dụ
 
 ## Lưu ý Quan trọng
 * Giới hạn triển khai Zalo: Bạn có 300 lần triển khai mỗi tháng cho chế độ Development và 60 lần triển khai mỗi tháng cho chế độ Testing.
-Tích hợp API Zalo: Tham khảo tài liệu API Zalo Mini App để tích hợp các dịch vụ của Zalo như Xác thực người dùng, Thanh toán, v.v.
+* Tích hợp API Zalo: Tham khảo tài liệu API Zalo Mini App để tích hợp các dịch vụ của Zalo như Xác thực người dùng, Thanh toán, v.v.
 
 ## Liên hệ
 Để có bất kỳ câu hỏi hoặc phản hồi nào, vui lòng liên hệ: 0946 630 197 (gặp Nhả) hoặc email: nhant2003forwork@gmail.com
