@@ -1,48 +1,33 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Box, Header, Icon, Input, useNavigate, Text } from "zmp-ui";
 import CategoryCard from "../components/cards/category_card";
 import ProductCard from "../components/cards/product_card";
 import { dataContext } from "../components/provider/provider";
+import { fetchAllCategories } from "../redux/slices/category/category";
 
 const Category = () => {
   const navigate = useNavigate();
-  const { products } = useContext(dataContext);
-  const [listProduct, setListProduct] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [searchProducts, setSearchProducts] = useState("");
-  const [activeCategory, setActiveCategory] = useState();
-  const [loadingCategory, setLoadingCategory] = useState(true);
+  const { products, dispatch } = useContext(dataContext);
 
-  const getAllCategories = async () => {
-    try {
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/categories`,
-        {
-          method: "GET",
-          headers: {
-            Authorization:
-              "Basic " +
-              btoa(
-                `${import.meta.env.VITE_CONSUMER_KEY}:${
-                  import.meta.env.VITE_CONSUMER_SECRET
-                }`
-              ),
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const categories = await response.json();
-      setLoadingCategory(false);
-      setCategories(categories.reverse());
-      setActiveCategory(categories[0].id);
-    } catch (error) {
-      setCategories(null);
-    }
-  };
+  const categories = useSelector((state) => state.categories.categories);
+  const categoryLoadingStatus = useSelector(
+    (state) => state.categories.loading
+  );
 
   useEffect(() => {
-    getAllCategories();
-  }, [products]);
+    dispatch(fetchAllCategories());
+  }, []);
+
+  const [listProduct, setListProduct] = useState([]);
+  const [searchProducts, setSearchProducts] = useState("");
+  const [activeCategory, setActiveCategory] = useState();
+
+  useEffect(() => {
+    if (categories.length > 0) {
+      setActiveCategory(categories[1].id);
+    }
+  }, [categories]);
 
   useEffect(() => {
     const filteredProducts = products.filter((product) => {
@@ -94,12 +79,12 @@ const Category = () => {
       ></Header>
       <Box className="overflow-scroll" p={4} style={{ height: "164px" }}>
         <Box flex className="gap-4 w-max">
-          {loadingCategory && (
+          {categoryLoadingStatus && (
             <Box flex alignItems="center" justifyContent="center">
               <Text className="sub-title">Đang tải...</Text>
             </Box>
           )}
-          {!loadingCategory &&
+          {!categoryLoadingStatus &&
             categories.map((category) => (
               <CategoryCard
                 key={category.id}

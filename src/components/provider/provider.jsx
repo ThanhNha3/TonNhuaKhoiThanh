@@ -1,11 +1,17 @@
 import React, { createContext, useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { getUserInfo } from "zmp-sdk/apis";
+import { fetchAllProductFeatured } from "../../redux/slices/product_featured/product_featured";
+import { fetchAllProductNew } from "../../redux/slices/product_new/product_new";
+import { fetchAllProductOnSale } from "../../redux/slices/product_onsale/product_onsale";
 export const dataContext = createContext(null);
 
-const Provider = (props) => {
+const ProviderContext = (props) => {
   const [userInfo, setUserInfo] = useState({});
   const [products, setProducts] = useState([]);
   const [newProducts, setNewProducts] = useState([]);
+
+  const dispatch = useDispatch();
 
   const formatCurrencyRange = (priceRange) => {
     if (!priceRange) return "Invalid input";
@@ -54,45 +60,21 @@ const Provider = (props) => {
     }
   };
 
-  const getNewProduct = async () => {
-    try {
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}?order=desc&orderby=date&per_page=10`,
-        {
-          method: "GET",
-          headers: {
-            Authorization:
-              "Basic " +
-              btoa(
-                `${import.meta.env.VITE_CONSUMER_KEY}:${
-                  import.meta.env.VITE_CONSUMER_SECRET
-                }`
-              ),
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const data = await response.json();
-      setNewProducts((prev) => [...prev, ...data]);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      throw error;
-    }
-  };
-
   useEffect(() => {
-    Promise.all([getUserInfo({}), getAllProducts(), getNewProduct()]).then(
-      (response) => {
-        setUserInfo(response[0]);
-      }
-    );
+    Promise.all([getUserInfo({})]).then((response) => {
+      setUserInfo(response[0]);
+    });
+    dispatch(fetchAllProductOnSale());
+    dispatch(fetchAllProductFeatured());
+    dispatch(fetchAllProductNew());
+    getAllProducts();
   }, []);
 
   const payload = {
     userInfo,
     products,
-    newProducts,
     formatCurrencyRange,
+    dispatch,
   };
 
   return (
@@ -102,4 +84,4 @@ const Provider = (props) => {
   );
 };
 
-export default Provider;
+export default ProviderContext;
